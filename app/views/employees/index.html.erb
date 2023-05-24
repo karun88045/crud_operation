@@ -1,0 +1,39 @@
+<div class="container">
+	
+	<table class="table">
+		<h4 class="py-2 text-center">This is Employees Model</h4>
+		<%= link_to 'Add to Employee', new_employee_path, class: 'btn btn-primary my-2' %>
+		<thead class="table-dark">
+			<tr>
+				<th>Id</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+				<th>Phone</th>
+				<th>Address</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+	<% @emp1.each do |e| %>
+		<tbody>
+			<tr>
+				<td><%= e.id %></td>
+				<td><%= e.name %></td>
+				<td><%= e.email %></td>
+				<td><%= e.password %></td>
+				<td><%= e.phone %></td>
+				<td><%= e.address %></td>
+				<td class="d-flex">
+					<%= link_to 'Edit', edit_employee_path(e), class: 'btn btn-primary mx-2' %>
+					<%= link_to 'View', employee_path(e), class: 'btn btn-success mx-2' %>
+					<%= button_to 'Delete', employee_path(e), class: 'btn btn-danger mx-2', method: :delete %>
+				</td>
+				
+			<tr/>
+		</tbody>
+	<% end %>
+	</table>
+
+
+	
+</div>

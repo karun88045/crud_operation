@@ -1,0 +1,9 @@
+	<%= form.collection_select :employee_id, Employee.all, :name, :id, class: 'form-control' %>
+		<%= form.select :desire, ['employee_id'] %>
+		<select name="employee_id" id="employee_id" class="form-control">
+			<option>Select</option>
+			<option value="<%= @document.employee_id %>"><%= @document.employee_id %></option>
+		</select>
+
+
+		<%= form.select :employee_id,Employee.all.pluck(:id,:name),{prompt:'select'},{class: "form-control"}%>

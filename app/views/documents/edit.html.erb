@@ -1,0 +1,20 @@
+<h1 class="py-4 text-center">Add Users</h1>
+<div class="container row col-md-8 mx-auto shadow p-3">
+	<%= form_with(model: @document, local: true) do |form| %>
+	<div class="mb-3">
+		<%= form.label :Name , class: 'mb-2' %>
+		<%= form.text_field :name , class: 'form-control' %>
+	</div>
+	<div class="mb-3">
+		<%= form.label :Doc_type , class: 'mb-2' %>
+		<%= form.text_field :doc_type , class: 'form-control' %>
+	</div>
+	<div class="mb-3">
+		<%= form.label :Employee_Id , class: 'mb-2' %>
+		<%= form.text_field :employee_id , class: 'form-control' %>
+	</div>
+	<div class="mb-3">
+		<%= form.submit :update , class: 'btn btn-primary' %>
+	</div>
+	<% end %>
+</div>

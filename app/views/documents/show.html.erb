@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row text-center shadow p-3 my-4">
+    <h4 class="my-4 card">Details Show</h4>
+  	<div class="col-md-6 col-lg-6 col-sm-12 card">
+  	  <p class="card mt-2">Id</p>
+  	  <p class="card">Name</p>
+  	  <p class="card">Doc Type</p>
+  	  <p class="card">Employee Id</p>
+      <p class="card">Employee Name</p>
+  	</div>
+  	<div class="col-md-6 col-lg-6 col-sm-12 card">
+  	  <p class="card mt-2"><%= @document.id %></p>
+  	  <p class="card"><%= @document.name %></p>
+  	  <p class="card"><%= @document.doc_type %></p>
+  	  <p class="card"><%= @document.employee_id %></p>
+      <p class="card"><%= @document.employee.name %></p>
+  	</div>
+  </div>
+</div>

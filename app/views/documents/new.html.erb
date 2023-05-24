@@ -1,0 +1,20 @@
+<h1 class="py-4 text-center">Add Document</h1>
+<div class="container row col-md-8 mx-auto shadow p-3">
+	<%= form_with model: @document do |f| %>
+	<div class="mb-3">
+		<%= f.label :Name , class: 'mb-2' %>
+		<%= f.text_field :name , class: 'form-control' %>
+	</div>
+	<div class="mb-3">
+		<%= f.label :Doc_type , class: 'mb-2' %>
+		<%= f.text_field :doc_type , class: 'form-control' %>
+	</div>
+	<div class="mb-3">
+		<%= f.label :Employee_id , class: 'mb-2' %>
+		<%= f.select :employee_id,Employee.all.pluck(:name, :id),{prompt: 'select'},{class:'form-control'} %>
+	</div>
+	<div class="mb-3">
+		<%= f.submit :create , class: 'btn btn-primary' %>
+	</div>
+	<% end %>
+</div>

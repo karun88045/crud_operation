@@ -1,0 +1,52 @@
+<h1 class="py-4 text-center">This is Details Page</h1>
+<div class="container">
+	<table class="table table-stripped table-hover table-bordered">
+		<tr>
+			<thead>
+				<th>#</th>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Password</th>
+				<th>Phone</th>
+				<th>Address</th>
+			</thead>
+		</tr>
+
+		<tbody>
+		<% @detail.each do |details| %>
+			<tr>
+				<td><%= details.id %></td>
+				<td><%= details.name %></td>
+				<td><%= details.email %></td>
+				<td><%= details.password %></td>
+				<td><%= details.phone %></td>
+				<td><%= details.address %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+<h1 class="py-4 text-center">This is Student Page</h1>
+<div class="container">
+	<table class="table table-stripped table-hover table-bordered">
+		<tr>
+			<thead>
+				<th>#</th>
+				<th>Student Name</th>
+				<th>Student Roll</th>
+			</thead>
+		</tr>
+
+		<tbody>
+		<% @student.each do |st| %>
+			<tr>
+				<td><%= st.id %></td>
+				<td><%= st.st_name %></td>
+				<td><%= st.st_roll %></td>
+			</tr>
+		<% end %>
+		</tbody>
+	</table>
+</div>
